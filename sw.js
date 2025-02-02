@@ -7,12 +7,18 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+    const url = new URL(event.request.url);
+
+    // Allow external requests to be fetched normally
+    if (!url.origin.includes(self.location.origin)) {
+        return;
+    }
+
     event.respondWith(
         fetch(event.request)
             .then((response) => {
-                // Ensure response is valid before modifying headers
                 if (!response || response.status < 200 || response.status > 599) {
-                    return response; // Return the response as is
+                    return response;
                 }
 
                 const newHeaders = new Headers(response.headers);
@@ -34,4 +40,5 @@ self.addEventListener("fetch", (event) => {
             })
     );
 });
+
 
