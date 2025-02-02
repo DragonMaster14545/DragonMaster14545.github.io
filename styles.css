@@ -1,0 +1,55 @@
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+}
+.game-frame {
+    width: 100%;
+    height: 350px;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    background: #1a1a1a;
+    overflow: hidden;
+}
+.dev-info {
+    background: #2c3e5022;
+    color: #ecf0f1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    backdrop-filter: blur(5px);
+}
+h2 {
+    color: #e74c3c;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+.roadmap-list {
+    list-style-type: '➤ ';
+    padding-left: 1.5rem;
+}
+.landscape-warning {
+    color: #f39c12;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.discord-widget {
+    background: #18191c;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.alpha-warning {
+    background: #8B0000;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    animation: pulse 2s infinite;
+    text-shadow: 0 0 5px rgba(255,215,0,0.5);
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
