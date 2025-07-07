@@ -25,12 +25,3 @@ particlesJS('particles-js', {
     },
     retina_detect: true
 });
-document.querySelectorAll('iframe').forEach(iframe => {
-    // Access each iframe's document
-    const iframeDoc = iframe.contentWindow.document;
-
-    // Mute all audio and video elements inside each iframe
-    iframeDoc.querySelectorAll('audio, video').forEach(media => {
-        media.muted = true;
-    });
-});
